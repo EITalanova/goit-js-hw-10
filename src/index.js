@@ -1,31 +1,28 @@
 import './css/styles.css';
-// import fetchCountries from "./fetchCountries.js"
-
 import debounce from 'lodash.debounce';
-import Notiflix from 'notiflix';
 import CountryInfoApiService from './fetchCountries';
 
 const input = document.querySelector('#search-box');
 const countryList = document.querySelector('.country-list');
+const countryName = document.querySelector('.country-name');
 const DEBOUNCE_DELAY = 1300;
-
-
 
 const countryInfoApiService = new CountryInfoApiService();
 
 function onSearch(evt) {
   evt.preventDefault();
+  clearContainer();
 
   countryInfoApiService.query = evt.target.value.trim();
-    console.log(countryInfoApiService.query);
-    
-    countryInfoApiService.fetchCountries();
-//   
+  countryInfoApiService.fetchCountries();
 }
+
+function clearContainer() {
+  countryList.innerHTML = '';
+}
+
+function styleForList() {
+countryName.hasAttribute("class", )
+}
+
 input.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
-
-// function markupOneCountry() {
-// countryList.innerHTML = 
-
-//  };
-// function markupManyCountry() { };

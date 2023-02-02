@@ -18,3 +18,28 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country-ell {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.country-name {
+  font-size: 20px;
+}
+
+.country-name-one {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.info-title {
+    font-weight: bold;
+}
+
+.no-marker {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
