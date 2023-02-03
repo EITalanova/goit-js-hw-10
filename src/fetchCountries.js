@@ -7,7 +7,7 @@ export default class CountryInfoApiService {
   }
 
   fetchCountries() {
-    const url = `https://restcountries.com/v3.1/name/${this.searchCountry}?fields=name.official,capital,population,flags,languages`;
+    const url = `https://restcountries.com/v3.1/name/${this.searchCountry}?fields=name,capital,population,flags,languages`;
     const countryList = document.querySelector('.country-list');
 
     fetch(url)

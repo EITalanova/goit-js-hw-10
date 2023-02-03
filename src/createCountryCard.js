@@ -1,9 +1,9 @@
 export function createOneCountryCard(countries) {
   return countries.map(
-    ({ altSpellings, capital, population, languages, flags }) =>
+    ({ name, capital, population, languages, flags }) =>
       `<li class="country-ell-one">
                 <img class="county-flag" src=${flags.svg} width="40""></img>
-  <span class="country-name-one">${altSpellings[1]}</span>
+  <span class="country-name-one">${name.official}</span>
   <ul class="country-info no-marker">
     <li class="info-list">
       <span class='info-title'>Capital:</span>
@@ -25,10 +25,10 @@ export function createOneCountryCard(countries) {
 export function createManyCountryCard(countries) {
   return countries
     .map(
-      ({ altSpellings, flags }) =>
+      ({ name, flags }) =>
         `<li class="country-ell">
             <img class="county-flag" src=${flags.svg} width="30""></img>
-            <span class="country-name">${altSpellings[1]}</span>
+            <span class="country-name">${name.official}</span>
         </li>`
     )
     .join('');
